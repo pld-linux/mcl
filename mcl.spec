@@ -42,11 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install
 
-gzip -9nf README.1ST
-
 %files
 %defattr(644,root,root,755)
-%doc README.1ST.gz doc
+%doc README.1ST doc
 %attr(755,root,root) %{_bindir}/mcl
 %{_libdir}/mcl
 
