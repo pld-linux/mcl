@@ -6,8 +6,6 @@ Version:	0.52.99
 Release:	1
 License:	GPL
 Group:		Applications/Games
-Group(de):	Applikationen/Spiele
-Group(pl):	Aplikacje/Gry
 Source0:	http://www.andreasen.org/mcl/dist/%{name}-%{version}-src.tar.gz
 URL:		http://www.andreasen.org/mcl/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
