@@ -29,8 +29,6 @@ disponíveis perl e python.
 %setup -q
 
 %build
-export CFLAGS="%{!?debug:%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g}}%{?debug:-O0 -g}"
-export CXXFLAGS="%{!?debug:%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g}}%{?debug:-O0 -g}"
 %configure
 %{__make}
 
