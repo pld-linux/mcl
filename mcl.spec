@@ -7,6 +7,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Games
 Source0:	http://www.andreasen.org/mcl/dist/%{name}-%{version}-src.tar.gz
+# Source0-md5:	21785179349e2648bda2ccb98025a79e
 URL:		http://www.andreasen.org/mcl/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
