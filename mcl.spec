@@ -4,7 +4,7 @@
 %bcond_without	python		# with python support 
 #
 Summary:	A MUD client for Unix
-Summary(pl):	Klient MUD dla uniksa
+Summary(pl):	Klient MUD dla Uniksa
 Summary(pt_BR):	Um cliente de MUD para Unix
 Name:		mcl
 Version:	0.53.00
@@ -26,7 +26,7 @@ an xterm or on a VT100/ANSI compatible terminal at a reduced speed.
 Embedded Perl and Python provide a high degree of tweakability.
 
 %description -l pl
-mcl jest klientem MUD dzia³aj±cym pod uniksem. Na linuksowej konsoli
+mcl jest klientem MUD dzia³aj±cym pod Uniksem. Na linuksowej konsoli
 u¿ywa bezpo¶redniego dostêpu do wirtualnej konsoli, aby osi±gn±æ du¿±
 szybko¶æ, ale mo¿e dzia³aæ te¿ pod xtermem lub terminalu VT100/ANSI z
 ograniczon± prêdko¶ci±. Wbudowany Perl i Python daj± du¿e mo¿liwo¶ci.
