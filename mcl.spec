@@ -1,14 +1,22 @@
+#
+# Conditional build:
+%bcond_without	perl		# with perl support
+%bcond_without	python		# with python support 
+#
 Summary:	A MUD client for Unix
 Summary(pl):	Klient MUD dla uniksa
 Summary(pt_BR):	Um cliente de MUD para Unix
 Name:		mcl
-Version:	0.52.99
+Version:	0.53.00
 Release:	1
 License:	GPL
 Group:		Applications/Games
 Source0:	http://www.andreasen.org/mcl/dist/%{name}-%{version}-src.tar.gz
-# Source0-md5:	21785179349e2648bda2ccb98025a79e
+# Source0-md5:	db67b299d26d8856045df0277078c8ca
+Patch0:		%{name}-ncurses.patch
 URL:		http://www.andreasen.org/mcl/
+%{?with_perl:BuildRequires:   perl-devel}
+%{?with_python:BuildRequires:   python-devel}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,15 +41,20 @@ disponíveis perl e python.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%configure
+%configure \
+	%{!?without_python:--enable-python} \
+	%{!?without_perl:--enable-perl}
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install
+%{__make} install \
+	INSTALL_ROOT=$RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
