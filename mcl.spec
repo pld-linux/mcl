@@ -44,6 +44,7 @@ disponíveis perl e python.
 %patch0 -p1
 
 %build
+cp -f /usr/share/automake/config.sub admin
 %configure \
 	%{!?without_python:--enable-python} \
 	%{!?without_perl:--enable-perl}
