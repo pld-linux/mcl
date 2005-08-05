@@ -8,15 +8,16 @@ Summary(pl):	Klient MUD dla Uniksa
 Summary(pt_BR):	Um cliente de MUD para Unix
 Name:		mcl
 Version:	0.53.00
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Games
 Source0:	http://www.andreasen.org/mcl/dist/%{name}-%{version}-src.tar.gz
 # Source0-md5:	db67b299d26d8856045df0277078c8ca
 Patch0:		%{name}-ncurses.patch
+Patch1:		%{name}-pic.patch
 URL:		http://www.andreasen.org/mcl/
-%{?with_perl:BuildRequires:   perl-devel}
-%{?with_python:BuildRequires:   python-devel}
+%{?with_perl:BuildRequires:	perl-devel}
+%{?with_python:BuildRequires:	python-devel}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,6 +43,7 @@ disponíveis perl e python.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
@@ -57,11 +59,17 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
 %doc README.1ST doc
 %attr(755,root,root) %{_bindir}/mcl
-%{_libdir}/mcl
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+%dir %{_prefix}/lib/mcl
+# these seem to be noarch - %{_datadir}/mcl?
+%{_prefix}/lib/mcl/auto
+%{_prefix}/lib/mcl/contrib
+%{_prefix}/lib/mcl/sys
+# *.so - %{_libdir}/mcl?
+%attr(755,root,root) %{_prefix}/lib/mcl/plugins
