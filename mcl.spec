@@ -4,8 +4,8 @@
 %bcond_without	python		# with python support 
 #
 Summary:	A MUD client for Unix
-Summary(pl):	Klient MUD dla Uniksa
-Summary(pt_BR):	Um cliente de MUD para Unix
+Summary(pl.UTF-8):   Klient MUD dla Uniksa
+Summary(pt_BR.UTF-8):   Um cliente de MUD para Unix
 Name:		mcl
 Version:	0.53.00
 Release:	2
@@ -26,19 +26,19 @@ direct Virtual Console access for high speed, but it can also run in
 an xterm or on a VT100/ANSI compatible terminal at a reduced speed.
 Embedded Perl and Python provide a high degree of tweakability.
 
-%description -l pl
-mcl jest klientem MUD dzia³aj±cym pod Uniksem. Na linuksowej konsoli
-u¿ywa bezpo¶redniego dostêpu do wirtualnej konsoli, aby osi±gn±æ du¿±
-szybko¶æ, ale mo¿e dzia³aæ te¿ pod xtermem lub terminalu VT100/ANSI z
-ograniczon± prêdko¶ci±. Wbudowany Perl i Python daj± du¿e mo¿liwo¶ci.
+%description -l pl.UTF-8
+mcl jest klientem MUD dziaÅ‚ajÄ…cym pod Uniksem. Na linuksowej konsoli
+uÅ¼ywa bezpoÅ›redniego dostÄ™pu do wirtualnej konsoli, aby osiÄ…gnÄ…Ä‡ duÅ¼Ä…
+szybkoÅ›Ä‡, ale moÅ¼e dziaÅ‚aÄ‡ teÅ¼ pod xtermem lub terminalu VT100/ANSI z
+ograniczonÄ… prÄ™dkoÅ›ciÄ…. Wbudowany Perl i Python dajÄ… duÅ¼e moÅ¼liwoÅ›ci.
 
-%description -l pt_BR
-O mcl é um cliente de MUD que roda no Unix. No console virtual do
+%description -l pt_BR.UTF-8
+O mcl Ã© um cliente de MUD que roda no Unix. No console virtual do
 Linux ele usa acesso direto ao console para obter uma velocidade
-maior, mas ele também pode rodar em um xterm, ou em um terminal
-compatível com a especificação VT100/ANSI, em uma velocidade inferior.
-O mcl tem suporte a scripts via plugins, sendo que já estão
-disponíveis perl e python.
+maior, mas ele tambÃ©m pode rodar em um xterm, ou em um terminal
+compatÃ­vel com a especificaÃ§Ã£o VT100/ANSI, em uma velocidade inferior.
+O mcl tem suporte a scripts via plugins, sendo que jÃ¡ estÃ£o
+disponÃ­veis perl e python.
 
 %prep
 %setup -q
