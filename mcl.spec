@@ -4,8 +4,8 @@
 %bcond_without	python		# with python support 
 #
 Summary:	A MUD client for Unix
-Summary(pl.UTF-8):   Klient MUD dla Uniksa
-Summary(pt_BR.UTF-8):   Um cliente de MUD para Unix
+Summary(pl.UTF-8):	Klient MUD dla Uniksa
+Summary(pt_BR.UTF-8):	Um cliente de MUD para Unix
 Name:		mcl
 Version:	0.53.00
 Release:	2
