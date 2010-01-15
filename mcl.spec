@@ -48,8 +48,8 @@ disponíveis perl e python.
 %build
 cp -f /usr/share/automake/config.sub admin
 %configure \
-	%{!?without_python:--enable-python} \
-	%{!?without_perl:--enable-perl}
+	%{?with_python:--enable-python} \
+	%{?with_perl:--enable-perl}
 
 %{__make}
 
